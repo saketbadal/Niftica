@@ -1,0 +1,16 @@
+# app.yaml (for App Engine deployment alternative)
+runtime: python310
+
+env_variables:
+  GCP_PROJECT_ID: "your-project-id"
+  VERTEX_LOCATION: "asia-south1"
+
+automatic_scaling:
+  min_instances: 1
+  max_instances: 5
+  target_cpu_utilization: 0.6
+
+resources:
+  cpu: 2
+  memory_gb: 2
+  disk_size_gb: 10
